@@ -29,23 +29,23 @@ class EditViewController: UIViewController {
     @IBAction func editButtonDidTap(_ sender: UIBarButtonItem) {
         if let text = textField.text, !text.isEmpty {
             delegate?.editButtonDidTap(text: text)
-            dismiss(animated: true, completion: nil)
+            dismiss(animated: true)
         } else {
             let alertController = UIAlertController(title: "テキストが入力されていません", message: nil, preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default)
             alertController.addAction(action)
             
-            present(alertController, animated: true, completion: nil)
+            present(alertController, animated: true)
         }
     }
     
     @IBAction func trashButtonDidTap(_ sender: UIBarButtonItem) {
         delegate?.trashButtonDidTap()
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
     @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
 }

@@ -25,11 +25,11 @@ class CreateViewController: UIViewController {
             delegate?.doneButtonDidTap(text: text)
         }
         
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
     @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
 }

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let viewController = CreateViewController.instantiate()
         viewController.delegate = self
         
-        present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
+        present(UINavigationController(rootViewController: viewController), animated: true)
     }
     
 }
@@ -50,7 +50,7 @@ extension ViewController: UITableViewDelegate {
         viewController.delegate = self
         viewController.item = items[indexPath.row]
         
-        present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
+        present(UINavigationController(rootViewController: viewController), animated: true)
     }
     
 }
