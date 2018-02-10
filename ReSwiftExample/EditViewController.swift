@@ -8,17 +8,10 @@
 
 import UIKit
 
-protocol EditViewControllerDelegate: class {
-    
-    func editButtonDidTap(text: String)
-    func trashButtonDidTap()
-    
-}
-
 class EditViewController: UIViewController {
     
-    weak var delegate: EditViewControllerDelegate?
     var item: String?
+    var index: Int!
     
     @IBOutlet weak var textField: UITextField!
     
@@ -28,7 +21,7 @@ class EditViewController: UIViewController {
     
     @IBAction func editButtonDidTap(_ sender: UIBarButtonItem) {
         if let text = textField.text, !text.isEmpty {
-            delegate?.editButtonDidTap(text: text)
+            appStore.dispatch(ItemListActionEditItem(index: index, item: text))
             dismiss(animated: true)
         } else {
             let alertController = UIAlertController(title: "テキストが入力されていません", message: nil, preferredStyle: .alert)
@@ -40,7 +33,7 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func trashButtonDidTap(_ sender: UIBarButtonItem) {
-        delegate?.trashButtonDidTap()
+        appStore.dispatch(ItemListActionDeleteItem(index: index))
         dismiss(animated: true)
     }
     

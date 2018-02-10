@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import ReSwift
 
 class ViewController: UIViewController {
     
     var items: [String] = ["ReSwiftExample"]
-
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -21,9 +22,24 @@ class ViewController: UIViewController {
     
     @IBAction func createItemButtonDidTap(_ sender: UIBarButtonItem) {
         let viewController = CreateViewController.instantiate()
-        viewController.delegate = self
-        
         present(UINavigationController(rootViewController: viewController), animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        appStore.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        appStore.unsubscribe(self)
+    }
+    
+}
+
+extension ViewController: StoreSubscriber {
+    
+    func newState(state: AppState) {
+        items = state.itemList.items
+        tableView.reloadData()
     }
     
 }
@@ -47,41 +63,9 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = EditViewController.instantiate()
-        viewController.delegate = self
         viewController.item = items[indexPath.row]
-        
+        viewController.index = indexPath.row
         present(UINavigationController(rootViewController: viewController), animated: true)
-    }
-    
-}
-
-extension ViewController: CreateViewControllerDelegate {
-    
-    func doneButtonDidTap(text: String) {
-        items.append(text)
-        tableView.reloadData()
-    }
-    
-}
-
-extension ViewController: EditViewControllerDelegate {
-    
-    func editButtonDidTap(text: String) {
-        guard let indexPath = tableView.indexPathForSelectedRow else {
-            return
-        }
-        
-        items[indexPath.row] = text
-        tableView.reloadData()
-    }
-    
-    func trashButtonDidTap() {
-        guard let indexPath = tableView.indexPathForSelectedRow else {
-            return
-        }
-        
-        items.remove(at: indexPath.row)
-        tableView.reloadData()
     }
     
 }

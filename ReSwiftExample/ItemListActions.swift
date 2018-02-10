@@ -9,20 +9,20 @@
 import Foundation
 import ReSwift
 
-struct ItemListActionCreateItem {
+struct ItemListActionCreateItem: Action {
     
     let item: String
 
 }
 
-struct ItemListActionEditItem {
+struct ItemListActionEditItem: Action {
     
     let index: Int
     let item: String
     
 }
 
-struct ItemListActionDeleteItem {
+struct ItemListActionDeleteItem: Action {
     
     let index: Int
     

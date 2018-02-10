@@ -8,21 +8,13 @@
 
 import UIKit
 
-protocol CreateViewControllerDelegate: class {
-    
-    func doneButtonDidTap(text: String)
-    
-}
-
 class CreateViewController: UIViewController {
-    
-    weak var delegate: CreateViewControllerDelegate?
     
     @IBOutlet weak var textField: UITextField!
     
     @IBAction func doneButtonDidTap(_ sender: UIBarButtonItem) {
         if let text = textField.text, !text.isEmpty {
-            delegate?.doneButtonDidTap(text: text)
+            appStore.dispatch(ItemListActionCreateItem(item: text))
         }
         
         dismiss(animated: true)
