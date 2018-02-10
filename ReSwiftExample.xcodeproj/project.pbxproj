@@ -21,6 +21,8 @@
 		2B6DF747202F4DA60045F1F3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF746202F4DA60045F1F3 /* AppState.swift */; };
 		2B6DF749202F4EE90045F1F3 /* ItemListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF748202F4EE90045F1F3 /* ItemListState.swift */; };
 		2B6DF74B202F506D0045F1F3 /* ItemListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF74A202F506D0045F1F3 /* ItemListActions.swift */; };
+		2B6DF74D202F522E0045F1F3 /* ItemListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF74C202F522E0045F1F3 /* ItemListReducer.swift */; };
+		2B6DF74F202F5CCC0045F1F3 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF74E202F5CCC0045F1F3 /* AppReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		2B6DF746202F4DA60045F1F3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2B6DF748202F4EE90045F1F3 /* ItemListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListState.swift; sourceTree = "<group>"; };
 		2B6DF74A202F506D0045F1F3 /* ItemListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListActions.swift; sourceTree = "<group>"; };
+		2B6DF74C202F522E0045F1F3 /* ItemListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListReducer.swift; sourceTree = "<group>"; };
+		2B6DF74E202F5CCC0045F1F3 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				2B6DF746202F4DA60045F1F3 /* AppState.swift */,
 				2B6DF748202F4EE90045F1F3 /* ItemListState.swift */,
 				2B6DF74A202F506D0045F1F3 /* ItemListActions.swift */,
+				2B6DF74E202F5CCC0045F1F3 /* AppReducer.swift */,
+				2B6DF74C202F522E0045F1F3 /* ItemListReducer.swift */,
 			);
 			path = ReSwiftExample;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				2B6DF749202F4EE90045F1F3 /* ItemListState.swift in Sources */,
 				2B6DF743202F3E360045F1F3 /* EditViewController.swift in Sources */,
 				2B6DF741202F3CF30045F1F3 /* UIViewController+ReSwiftExample.swift in Sources */,
+				2B6DF74F202F5CCC0045F1F3 /* AppReducer.swift in Sources */,
+				2B6DF74D202F522E0045F1F3 /* ItemListReducer.swift in Sources */,
 				2B6DF726202F29BF0045F1F3 /* ViewController.swift in Sources */,
 				2B6DF747202F4DA60045F1F3 /* AppState.swift in Sources */,
 				2B6DF724202F29BF0045F1F3 /* AppDelegate.swift in Sources */,
