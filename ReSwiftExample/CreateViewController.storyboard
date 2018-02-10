@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create View Controller-->
+        <!--Item-->
         <scene sceneID="waV-Dn-ILQ">
             <objects>
                 <viewController id="zfg-fu-crf" customClass="CreateViewController" customModule="ReSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,6 +20,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="FOc-Pk-f00"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Item" id="dYZ-9d-hwE">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="hAC-7c-XsB">
+                            <connections>
+                                <action selector="cancelButtonDidTap:" destination="zfg-fu-crf" id="SDe-i7-6ZA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="N3x-0M-a1z">
+                            <connections>
+                                <action selector="doneButtonDidTap:" destination="zfg-fu-crf" id="NsL-bS-JVG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wq8-Ql-UFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

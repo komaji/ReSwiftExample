@@ -16,6 +16,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func createItemButtonDidTap(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: String(describing: CreateViewController.self), bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()!
+        present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {

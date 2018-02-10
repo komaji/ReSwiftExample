@@ -6,8 +6,16 @@
 //  Copyright © 2018年 KojimaTatsuya. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CreateViewController: UIViewController {
+    
+    @IBAction func doneButtonDidTap(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
 }
