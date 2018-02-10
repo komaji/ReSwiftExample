@@ -13,6 +13,8 @@
 		2B6DF72B202F29BF0045F1F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6DF72A202F29BF0045F1F3 /* Assets.xcassets */; };
 		2B6DF72E202F29BF0045F1F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6DF72C202F29BF0045F1F3 /* LaunchScreen.storyboard */; };
 		2B6DF73A202F2AEA0045F1F3 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6DF735202F2ACF0045F1F3 /* ReSwift.framework */; };
+		2B6DF73D202F2F060045F1F3 /* CreateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6DF73C202F2F060045F1F3 /* CreateViewController.storyboard */; };
+		2B6DF73F202F2F2B0045F1F3 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF73E202F2F2B0045F1F3 /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2B6DF72D202F29BF0045F1F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B6DF72F202F29BF0045F1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B6DF735202F2ACF0045F1F3 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		2B6DF73C202F2F060045F1F3 /* CreateViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateViewController.storyboard; sourceTree = "<group>"; };
+		2B6DF73E202F2F2B0045F1F3 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				2B6DF72A202F29BF0045F1F3 /* Assets.xcassets */,
 				2B6DF72C202F29BF0045F1F3 /* LaunchScreen.storyboard */,
 				2B6DF72F202F29BF0045F1F3 /* Info.plist */,
+				2B6DF73C202F2F060045F1F3 /* CreateViewController.storyboard */,
+				2B6DF73E202F2F2B0045F1F3 /* CreateViewController.swift */,
 			);
 			path = ReSwiftExample;
 			sourceTree = "<group>";
@@ -137,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B6DF72E202F29BF0045F1F3 /* LaunchScreen.storyboard in Resources */,
+				2B6DF73D202F2F060045F1F3 /* CreateViewController.storyboard in Resources */,
 				2B6DF72B202F29BF0045F1F3 /* Assets.xcassets in Resources */,
 				2B6DF729202F29BF0045F1F3 /* Main.storyboard in Resources */,
 			);
@@ -169,6 +176,7 @@
 			files = (
 				2B6DF726202F29BF0045F1F3 /* ViewController.swift in Sources */,
 				2B6DF724202F29BF0045F1F3 /* AppDelegate.swift in Sources */,
+				2B6DF73F202F2F2B0045F1F3 /* CreateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
