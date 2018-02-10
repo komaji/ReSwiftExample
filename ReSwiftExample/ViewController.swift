@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
+            tableView.delegate = self
         }
     }
     
@@ -42,10 +43,44 @@ extension ViewController: UITableViewDataSource {
     
 }
 
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = EditViewController.instantiate()
+        viewController.delegate = self
+        viewController.item = items[indexPath.row]
+        
+        present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
+    }
+    
+}
+
 extension ViewController: CreateViewControllerDelegate {
     
     func doneButtonDidTap(text: String) {
         items.append(text)
+        tableView.reloadData()
+    }
+    
+}
+
+extension ViewController: EditViewControllerDelegate {
+    
+    func editButtonDidTap(text: String) {
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        items[indexPath.row] = text
+        tableView.reloadData()
+    }
+    
+    func trashButtonDidTap() {
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        items.remove(at: indexPath.row)
         tableView.reloadData()
     }
     
