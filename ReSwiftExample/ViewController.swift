@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var items: [String] = []
+    var items: [String] = ["ReSwiftExample"]
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
