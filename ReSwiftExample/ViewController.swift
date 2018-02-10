@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var items: [String] = []
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -18,23 +20,34 @@ class ViewController: UIViewController {
     
     @IBAction func createItemButtonDidTap(_ sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: String(describing: CreateViewController.self), bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController()!
+        let viewController = storyboard.instantiateInitialViewController() as! CreateViewController
+        viewController.delegate = self
+        
         present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
     }
     
 }
 
 extension ViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = "cell \(indexPath.row)"
+        cell.textLabel?.text = items[indexPath.row]
         
         return cell
+    }
+    
+}
+
+extension ViewController: CreateViewControllerDelegate {
+    
+    func doneButtonDidTap(text: String) {
+        items.append(text)
+        tableView.reloadData()
     }
     
 }

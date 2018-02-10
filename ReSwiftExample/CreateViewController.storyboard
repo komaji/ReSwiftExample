@@ -17,7 +17,20 @@
                     <view key="view" contentMode="scaleToFill" id="w5H-xh-Xhg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-oi-2Gr">
+                                <rect key="frame" x="32" y="318" width="311" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Crc-oi-2Gr" firstAttribute="leading" secondItem="FOc-Pk-f00" secondAttribute="leading" constant="32" id="J5v-re-vad"/>
+                            <constraint firstItem="FOc-Pk-f00" firstAttribute="trailing" secondItem="Crc-oi-2Gr" secondAttribute="trailing" constant="32" id="eNQ-B9-q7z"/>
+                            <constraint firstItem="Crc-oi-2Gr" firstAttribute="centerY" secondItem="w5H-xh-Xhg" secondAttribute="centerY" id="rgI-UR-MWi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FOc-Pk-f00"/>
                     </view>
                     <navigationItem key="navigationItem" title="Item" id="dYZ-9d-hwE">
@@ -33,6 +46,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="textField" destination="Crc-oi-2Gr" id="csQ-nS-LGW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wq8-Ql-UFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
