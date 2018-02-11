@@ -78,22 +78,15 @@
 		2B6DF722202F29BF0045F1F3 /* ReSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				2B6DF751203042370045F1F3 /* Storyboards */,
+				2B6DF750203042070045F1F3 /* Views */,
+				2B6DF754203042730045F1F3 /* States */,
+				2B6DF752203042510045F1F3 /* Actions */,
+				2B6DF753203042610045F1F3 /* Reducers */,
 				2B6DF723202F29BF0045F1F3 /* AppDelegate.swift */,
-				2B6DF725202F29BF0045F1F3 /* ViewController.swift */,
-				2B6DF727202F29BF0045F1F3 /* ViewController.storyboard */,
-				2B6DF72A202F29BF0045F1F3 /* Assets.xcassets */,
-				2B6DF72C202F29BF0045F1F3 /* LaunchScreen.storyboard */,
-				2B6DF72F202F29BF0045F1F3 /* Info.plist */,
-				2B6DF73C202F2F060045F1F3 /* CreateViewController.storyboard */,
-				2B6DF73E202F2F2B0045F1F3 /* CreateViewController.swift */,
-				2B6DF744202F3E470045F1F3 /* EditViewController.storyboard */,
-				2B6DF742202F3E360045F1F3 /* EditViewController.swift */,
 				2B6DF740202F3CF30045F1F3 /* UIViewController+ReSwiftExample.swift */,
-				2B6DF746202F4DA60045F1F3 /* AppState.swift */,
-				2B6DF748202F4EE90045F1F3 /* ItemListState.swift */,
-				2B6DF74A202F506D0045F1F3 /* ItemListActions.swift */,
-				2B6DF74E202F5CCC0045F1F3 /* AppReducer.swift */,
-				2B6DF74C202F522E0045F1F3 /* ItemListReducer.swift */,
+				2B6DF72A202F29BF0045F1F3 /* Assets.xcassets */,
+				2B6DF72F202F29BF0045F1F3 /* Info.plist */,
 			);
 			path = ReSwiftExample;
 			sourceTree = "<group>";
@@ -104,6 +97,53 @@
 				2B6DF735202F2ACF0045F1F3 /* ReSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B6DF750203042070045F1F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DF725202F29BF0045F1F3 /* ViewController.swift */,
+				2B6DF73E202F2F2B0045F1F3 /* CreateViewController.swift */,
+				2B6DF742202F3E360045F1F3 /* EditViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2B6DF751203042370045F1F3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DF72C202F29BF0045F1F3 /* LaunchScreen.storyboard */,
+				2B6DF727202F29BF0045F1F3 /* ViewController.storyboard */,
+				2B6DF73C202F2F060045F1F3 /* CreateViewController.storyboard */,
+				2B6DF744202F3E470045F1F3 /* EditViewController.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2B6DF752203042510045F1F3 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DF74A202F506D0045F1F3 /* ItemListActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		2B6DF753203042610045F1F3 /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DF74E202F5CCC0045F1F3 /* AppReducer.swift */,
+				2B6DF74C202F522E0045F1F3 /* ItemListReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		2B6DF754203042730045F1F3 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DF746202F4DA60045F1F3 /* AppState.swift */,
+				2B6DF748202F4EE90045F1F3 /* ItemListState.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
