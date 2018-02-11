@@ -33,7 +33,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="TODO" id="GBQ-X7-sOE">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="E4l-Ff-6mr">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="E4l-Ff-6mr">
                             <connections>
                                 <action selector="createItemButtonDidTap:" destination="BYZ-38-t0r" id="CZa-dI-f8c"/>
                             </connections>

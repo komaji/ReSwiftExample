@@ -34,7 +34,7 @@
                         <viewLayoutGuide key="safeArea" id="FOc-Pk-f00"/>
                     </view>
                     <navigationItem key="navigationItem" title="Item" id="dYZ-9d-hwE">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="hAC-7c-XsB">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="hAC-7c-XsB">
                             <connections>
                                 <action selector="cancelButtonDidTap:" destination="zfg-fu-crf" id="SDe-i7-6ZA"/>
                             </connections>
