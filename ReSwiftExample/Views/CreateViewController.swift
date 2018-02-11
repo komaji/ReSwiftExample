@@ -14,7 +14,7 @@ class CreateViewController: UIViewController {
     
     @IBAction func doneButtonDidTap(_ sender: UIBarButtonItem) {
         if let text = textField.text, !text.isEmpty {
-            appStore.dispatch(ItemListActionCreateItem(item: text))
+            appStore.dispatch(ItemListActionCreateItem(item: Item(text: text)))
         }
         
         dismiss(animated: true)

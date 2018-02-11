@@ -11,14 +11,14 @@ import ReSwift
 
 struct ItemListActionCreateItem: Action {
     
-    let item: String
+    let item: Item
 
 }
 
 struct ItemListActionEditItem: Action {
     
     let index: Int
-    let item: String
+    let item: Item
     
 }
 

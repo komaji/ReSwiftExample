@@ -18,7 +18,7 @@ class EditViewController: UIViewController {
             return
         }
         
-        textField.text = appStore.state.itemList.items[index]
+        textField.text = appStore.state.itemList.items[index].text
     }
     
     @IBAction func editButtonDidTap(_ sender: UIBarButtonItem) {
@@ -28,7 +28,7 @@ class EditViewController: UIViewController {
         }
 
         if let text = textField.text, !text.isEmpty {
-            appStore.dispatch(ItemListActionEditItem(index: index, item: text))
+            appStore.dispatch(ItemListActionEditItem(index: index, item: Item(text: text)))
             dismiss(animated: true)
         } else {
             let alertController = UIAlertController(title: "テキストが入力されていません", message: nil, preferredStyle: .alert)

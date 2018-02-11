@@ -53,7 +53,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = appStore.state.itemList.items[indexPath.row]
+        cell.textLabel?.text = appStore.state.itemList.items[indexPath.row].text
         
         return cell
     }

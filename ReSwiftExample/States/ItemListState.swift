@@ -10,7 +10,7 @@ import Foundation
 
 struct ItemListState {
     
-    var items: [String] = []
+    var items: [Item] = []
     var selectedIndex: Int?
     
 }

@@ -23,6 +23,7 @@
 		2B6DF74B202F506D0045F1F3 /* ItemListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF74A202F506D0045F1F3 /* ItemListActions.swift */; };
 		2B6DF74D202F522E0045F1F3 /* ItemListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF74C202F522E0045F1F3 /* ItemListReducer.swift */; };
 		2B6DF74F202F5CCC0045F1F3 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF74E202F5CCC0045F1F3 /* AppReducer.swift */; };
+		2B6DF7572030438D0045F1F3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6DF7562030438D0045F1F3 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		2B6DF74A202F506D0045F1F3 /* ItemListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListActions.swift; sourceTree = "<group>"; };
 		2B6DF74C202F522E0045F1F3 /* ItemListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListReducer.swift; sourceTree = "<group>"; };
 		2B6DF74E202F5CCC0045F1F3 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		2B6DF7562030438D0045F1F3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				2B6DF754203042730045F1F3 /* States */,
 				2B6DF752203042510045F1F3 /* Actions */,
 				2B6DF753203042610045F1F3 /* Reducers */,
+				2B6DF755203043770045F1F3 /* Entities */,
 				2B6DF723202F29BF0045F1F3 /* AppDelegate.swift */,
 				2B6DF740202F3CF30045F1F3 /* UIViewController+ReSwiftExample.swift */,
 				2B6DF72A202F29BF0045F1F3 /* Assets.xcassets */,
@@ -144,6 +147,14 @@
 				2B6DF748202F4EE90045F1F3 /* ItemListState.swift */,
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		2B6DF755203043770045F1F3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2B6DF7562030438D0045F1F3 /* Item.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				2B6DF741202F3CF30045F1F3 /* UIViewController+ReSwiftExample.swift in Sources */,
 				2B6DF74F202F5CCC0045F1F3 /* AppReducer.swift in Sources */,
 				2B6DF74D202F522E0045F1F3 /* ItemListReducer.swift in Sources */,
+				2B6DF7572030438D0045F1F3 /* Item.swift in Sources */,
 				2B6DF726202F29BF0045F1F3 /* ViewController.swift in Sources */,
 				2B6DF747202F4DA60045F1F3 /* AppState.swift in Sources */,
 				2B6DF724202F29BF0045F1F3 /* AppDelegate.swift in Sources */,
