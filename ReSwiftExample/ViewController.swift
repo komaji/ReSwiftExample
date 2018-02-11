@@ -11,8 +11,6 @@ import ReSwift
 
 class ViewController: UIViewController {
     
-    var items: [String] = ["ReSwiftExample"]
-    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
@@ -38,7 +36,6 @@ class ViewController: UIViewController {
 extension ViewController: StoreSubscriber {
     
     func newState(state: AppState) {
-        items = state.itemList.items
         tableView.reloadData()
     }
     
@@ -47,12 +44,12 @@ extension ViewController: StoreSubscriber {
 extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return appStore.state.itemList.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.text = appStore.state.itemList.items[indexPath.row]
         
         return cell
     }
