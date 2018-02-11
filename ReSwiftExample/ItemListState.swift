@@ -11,5 +11,6 @@ import Foundation
 struct ItemListState {
     
     var items: [String] = []
+    var selectedIndex: Int?
     
 }

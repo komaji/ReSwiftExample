@@ -63,9 +63,9 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = EditViewController.instantiate()
-        viewController.item = items[indexPath.row]
-        viewController.index = indexPath.row
         present(UINavigationController(rootViewController: viewController), animated: true)
+        
+        appStore.dispatch(ItemListActionSelectItem(index: indexPath.row))
     }
     
 }

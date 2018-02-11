@@ -27,3 +27,9 @@ struct ItemListActionDeleteItem: Action {
     let index: Int
     
 }
+
+struct ItemListActionSelectItem: Action {
+    
+    let index: Int
+    
+}

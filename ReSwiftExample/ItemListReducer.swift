@@ -22,6 +22,9 @@ func itemListReducer(action: Action, state: ItemListState?) -> ItemListState {
     case let deleteItem as ItemListActionDeleteItem:
         state.items.remove(at: deleteItem.index)
         
+    case let selectItem as ItemListActionSelectItem:
+        state.selectedIndex = selectItem.index
+        
     default:
         break
     }

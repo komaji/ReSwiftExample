@@ -10,16 +10,23 @@ import UIKit
 
 class EditViewController: UIViewController {
     
-    var item: String?
-    var index: Int!
-    
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
-        textField.text = item
+        guard let index = appStore.state.itemList.selectedIndex else {
+            dismiss(animated: true)
+            return
+        }
+        
+        textField.text = appStore.state.itemList.items[index]
     }
     
     @IBAction func editButtonDidTap(_ sender: UIBarButtonItem) {
+        guard let index = appStore.state.itemList.selectedIndex else {
+            dismiss(animated: true)
+            return
+        }
+
         if let text = textField.text, !text.isEmpty {
             appStore.dispatch(ItemListActionEditItem(index: index, item: text))
             dismiss(animated: true)
@@ -33,6 +40,11 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func trashButtonDidTap(_ sender: UIBarButtonItem) {
+        guard let index = appStore.state.itemList.selectedIndex else {
+            dismiss(animated: true)
+            return
+        }
+
         appStore.dispatch(ItemListActionDeleteItem(index: index))
         dismiss(animated: true)
     }
