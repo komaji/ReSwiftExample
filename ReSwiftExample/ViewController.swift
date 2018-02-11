@@ -24,7 +24,11 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        appStore.subscribe(self)
+        appStore.subscribe(self) { subscription in
+            subscription.select { appState in
+                appState.itemList
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -35,7 +39,7 @@ class ViewController: UIViewController {
 
 extension ViewController: StoreSubscriber {
     
-    func newState(state: AppState) {
+    func newState(state: ItemListState) {
         tableView.reloadData()
     }
     
